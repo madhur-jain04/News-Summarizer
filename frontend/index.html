@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI News Summarizer</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📰 Automated News Summarizer</h1>
+            <p>Input a news article URL or paste the text directly below.</p>
+        </header>
+
+        <main class="card">
+            <div class="input-section">
+                <input type="url" id="url-input" placeholder="Paste News Article URL (e.g., https://example.com/article)">
+                <textarea id="text-input" rows="8" placeholder="Or paste the full news article text here... (minimum 50 words)"></textarea>
+                <button id="summarize-btn">Summarize Article</button>
+            </div>
+            
+            <div id="loading-spinner" class="spinner-hidden"></div>
+            <p id="error-message" class="error-hidden"></p>
+
+            <div id="results" class="results-hidden">
+                <h2>Summary Results</h2>
+                
+                <div class="summary-stats">
+                    <p>Original Word Count: <span id="original-word-count">N/A</span></p>
+                    <p>Extractive Word Count: <span id="extractive-word-count">N/A</span></p>
+                    <p>Reduction: <span id="reduction-percentage">N/A</span></p>
+                </div>
+                
+                <div class="summary-box">
+                    <h3>Extractive Summary <span class="badge badge-extractive">Sentence Selection</span></h3>
+                    <p id="extractive-output" class="summary-text"></p>
+                </div>
+                
+                <div class="summary-box">
+                    <h3>Abstractive Summary <span class="badge badge-abstractive">Generated Text</span></h3>
+                    <p id="abstractive-output" class="summary-text"></p>
+                </div>
+
+                <details>
+                    <summary>View Original Text</summary>
+                    <p id="original-output" class="original-text"></p>
+                </details>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 NLP Summarization Project | Built with Flask & Vanilla JS</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
