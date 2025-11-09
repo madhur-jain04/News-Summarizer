@@ -3,7 +3,7 @@ from flask_cors import CORS
 from summarizer_service import extractive_summarize, abstractive_summarize, get_text_stats
 from scraper_service import get_article_text_from_url
 
-# Initialize Flask App
+# Initialize Flask App start
 app = Flask(__name__)
 # Enable CORS for the frontend to communicate with the backend
 CORS(app) 
@@ -56,4 +56,5 @@ def summarize_endpoint():
 
 if __name__ == '__main__':
     print("Starting Flask API on http://127.0.0.1:5000")
+
     app.run(debug=True, port=5000)
