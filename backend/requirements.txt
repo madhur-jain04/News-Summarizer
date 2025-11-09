@@ -1,0 +1,10 @@
+Flask
+Flask-CORS
+requests
+beautifulsoup4
+lxml
+nltk
+scikit-learn
+numpy
+transformers
+torch
